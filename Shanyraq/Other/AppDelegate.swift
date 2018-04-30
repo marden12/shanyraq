@@ -42,18 +42,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func loadMainPages() {
         let nav1 = UINavigationController()
         let first = MyHomeViewController()
-        first.view.backgroundColor = .red
+        first.view.backgroundColor = .backgroundColor
         nav1.viewControllers = [first]
-        nav1.tabBarItem = UITabBarItem(title: "Nav1", image: #imageLiteral(resourceName: "home_grey"), tag: 1)
+        nav1.tabBarItem = UITabBarItem(title: "My", image: #imageLiteral(resourceName: "home_grey"), tag: 1)
         
         let nav2 = UINavigationController()
         let second = ProfileViewController()
-        second.view.backgroundColor = .green
+        second.view.backgroundColor = .backgroundColor
         nav2.viewControllers = [second]
-        nav2.tabBarItem = UITabBarItem(title: "Nav2", image: #imageLiteral(resourceName: "profile_grey"), tag: 1)
+        nav2.tabBarItem = UITabBarItem(title: "Profile", image: #imageLiteral(resourceName: "profile_grey"), tag: 1)
         
         let tabs = UITabBarController()
         tabs.viewControllers = [nav1, nav2]
+        
+        UITabBar.appearance().tintColor = .newRed
         
         self.window!.rootViewController = tabs;
         self.window?.makeKeyAndVisible();
