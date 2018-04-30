@@ -8,7 +8,8 @@
 
 import UIKit
 import CoreData
-
+import Firebase
+import FirebaseAuth
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -17,8 +18,51 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        FirebaseApp.configure()
+        coordinateAppFlow()
+        setupWindow()
         return true
     }
+    fileprivate func coordinateAppFlow() {
+        if ((Auth.auth().currentUser) != nil) {
+            loadMainPages()
+        } else {
+            loadMainPages()
+        }
+    }
+    func setupWindow(){
+        UINavigationBar.appearance().backgroundColor = .white
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().barTintColor = .white
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+    }
+    
+    func loadMainPages() {
+        let nav1 = UINavigationController()
+        let first = MyHomeViewController()
+        first.view.backgroundColor = .red
+        nav1.viewControllers = [first]
+        nav1.tabBarItem = UITabBarItem(title: "Nav1", image: #imageLiteral(resourceName: "home_grey"), tag: 1)
+        
+        let nav2 = UINavigationController()
+        let second = ProfileViewController()
+        second.view.backgroundColor = .green
+        nav2.viewControllers = [second]
+        nav2.tabBarItem = UITabBarItem(title: "Nav2", image: #imageLiteral(resourceName: "profile_grey"), tag: 1)
+        
+        let tabs = UITabBarController()
+        tabs.viewControllers = [nav1, nav2]
+        
+        self.window!.rootViewController = tabs;
+        self.window?.makeKeyAndVisible();
+    }
+    
+    func loadLoginPages() {
+        //lofin page
+    }
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1862B23A2096E2A400839D14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862B2392096E2A400839D14 /* AppDelegate.swift */; };
-		1862B23C2096E2A400839D14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862B23B2096E2A400839D14 /* ViewController.swift */; };
+		1862B23C2096E2A400839D14 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862B23B2096E2A400839D14 /* ProfileViewController.swift */; };
 		1862B2422096E2A400839D14 /* Shanyraq.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1862B2402096E2A400839D14 /* Shanyraq.xcdatamodeld */; };
 		1862B2442096E2A400839D14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1862B2432096E2A400839D14 /* Assets.xcassets */; };
 		1862B2472096E2A400839D14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1862B2452096E2A400839D14 /* LaunchScreen.storyboard */; };
@@ -22,6 +22,11 @@
 		1862B27C2096E63D00839D14 /* ProximaNovaSoft-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1862B2782096E63C00839D14 /* ProximaNovaSoft-Regular.otf */; };
 		1862B27D2096E63D00839D14 /* ProximaNovaSoft-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1862B2792096E63D00839D14 /* ProximaNovaSoft-Semibold.otf */; };
 		1862B27E2096E68100839D14 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1862B2482096E2A400839D14 /* Info.plist */; };
+		1862B2802096E8BE00839D14 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1862B27F2096E8BD00839D14 /* GoogleService-Info.plist */; };
+		1862B2822096E96A00839D14 /* MyHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862B2812096E96A00839D14 /* MyHomeViewController.swift */; };
+		343BBEBAE01BEE9CF23410F1 /* Pods_ShanyraqUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52EC85A2D32D45E4497EA4A /* Pods_ShanyraqUITests.framework */; };
+		5093E3F592C5D89FAA05D909 /* Pods_Shanyraq.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE20338484B1DC1BF622225A /* Pods_Shanyraq.framework */; };
+		9212FBC43C7ECF248D8AE81F /* Pods_ShanyraqTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE774DAAAABB9D1688E7691 /* Pods_ShanyraqTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +49,7 @@
 /* Begin PBXFileReference section */
 		1862B2362096E2A400839D14 /* Shanyraq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shanyraq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1862B2392096E2A400839D14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1862B23B2096E2A400839D14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1862B23B2096E2A400839D14 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1862B2412096E2A400839D14 /* Shanyraq.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shanyraq.xcdatamodel; sourceTree = "<group>"; };
 		1862B2432096E2A400839D14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1862B2462096E2A400839D14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,6 +67,17 @@
 		1862B2772096E63C00839D14 /* ProximaNovaSoft-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaSoft-Medium.otf"; sourceTree = "<group>"; };
 		1862B2782096E63C00839D14 /* ProximaNovaSoft-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaSoft-Regular.otf"; sourceTree = "<group>"; };
 		1862B2792096E63D00839D14 /* ProximaNovaSoft-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaSoft-Semibold.otf"; sourceTree = "<group>"; };
+		1862B27F2096E8BD00839D14 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1862B2812096E96A00839D14 /* MyHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHomeViewController.swift; sourceTree = "<group>"; };
+		2AE774DAAAABB9D1688E7691 /* Pods_ShanyraqTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShanyraqTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48206E1A727B654E575163B6 /* Pods-Shanyraq.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shanyraq.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shanyraq/Pods-Shanyraq.release.xcconfig"; sourceTree = "<group>"; };
+		7B8F4FB9529BD710FC8F1941 /* Pods-ShanyraqUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShanyraqUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShanyraqUITests/Pods-ShanyraqUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7BE6C9FED91E541E866FCBD6 /* Pods-Shanyraq.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shanyraq.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shanyraq/Pods-Shanyraq.debug.xcconfig"; sourceTree = "<group>"; };
+		AE20338484B1DC1BF622225A /* Pods_Shanyraq.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shanyraq.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B39BF8AE72010DE3F58031BC /* Pods-ShanyraqTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShanyraqTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShanyraqTests/Pods-ShanyraqTests.release.xcconfig"; sourceTree = "<group>"; };
+		D20F02DE0AB906A4706788E9 /* Pods-ShanyraqUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShanyraqUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShanyraqUITests/Pods-ShanyraqUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E0ABF23D4E8F8A2864A8F7C7 /* Pods-ShanyraqTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShanyraqTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShanyraqTests/Pods-ShanyraqTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E52EC85A2D32D45E4497EA4A /* Pods_ShanyraqUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShanyraqUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5093E3F592C5D89FAA05D909 /* Pods_Shanyraq.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9212FBC43C7ECF248D8AE81F /* Pods_ShanyraqTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				343BBEBAE01BEE9CF23410F1 /* Pods_ShanyraqUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +115,8 @@
 				1862B2502096E2A400839D14 /* ShanyraqTests */,
 				1862B25B2096E2A400839D14 /* ShanyraqUITests */,
 				1862B2372096E2A400839D14 /* Products */,
+				70D645C9B5BBF5F369F19446 /* Pods */,
+				33BDD8FECF7B383A8A53A447 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +133,7 @@
 		1862B2382096E2A400839D14 /* Shanyraq */ = {
 			isa = PBXGroup;
 			children = (
+				1862B2482096E2A400839D14 /* Info.plist */,
 				1862B2722096E5B300839D14 /* Other */,
 				1862B26D2096E2EB00839D14 /* Extensions */,
 				1862B26A2096E2B900839D14 /* Model */,
@@ -158,7 +180,8 @@
 		1862B26C2096E2C500839D14 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1862B23B2096E2A400839D14 /* ViewController.swift */,
+				1862B23B2096E2A400839D14 /* ProfileViewController.swift */,
+				1862B2812096E96A00839D14 /* MyHomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -177,9 +200,9 @@
 			children = (
 				1862B2432096E2A400839D14 /* Assets.xcassets */,
 				1862B2452096E2A400839D14 /* LaunchScreen.storyboard */,
-				1862B2482096E2A400839D14 /* Info.plist */,
 				1862B2402096E2A400839D14 /* Shanyraq.xcdatamodeld */,
 				1862B2392096E2A400839D14 /* AppDelegate.swift */,
+				1862B27F2096E8BD00839D14 /* GoogleService-Info.plist */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -195,6 +218,29 @@
 			path = myFonts;
 			sourceTree = "<group>";
 		};
+		33BDD8FECF7B383A8A53A447 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE20338484B1DC1BF622225A /* Pods_Shanyraq.framework */,
+				2AE774DAAAABB9D1688E7691 /* Pods_ShanyraqTests.framework */,
+				E52EC85A2D32D45E4497EA4A /* Pods_ShanyraqUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70D645C9B5BBF5F369F19446 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7BE6C9FED91E541E866FCBD6 /* Pods-Shanyraq.debug.xcconfig */,
+				48206E1A727B654E575163B6 /* Pods-Shanyraq.release.xcconfig */,
+				E0ABF23D4E8F8A2864A8F7C7 /* Pods-ShanyraqTests.debug.xcconfig */,
+				B39BF8AE72010DE3F58031BC /* Pods-ShanyraqTests.release.xcconfig */,
+				7B8F4FB9529BD710FC8F1941 /* Pods-ShanyraqUITests.debug.xcconfig */,
+				D20F02DE0AB906A4706788E9 /* Pods-ShanyraqUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -202,9 +248,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1862B2612096E2A500839D14 /* Build configuration list for PBXNativeTarget "Shanyraq" */;
 			buildPhases = (
+				AA4AE8D6CC299405A3F99A4B /* [CP] Check Pods Manifest.lock */,
 				1862B2322096E2A400839D14 /* Sources */,
 				1862B2332096E2A400839D14 /* Frameworks */,
 				1862B2342096E2A400839D14 /* Resources */,
+				2198610275B1277E7298555B /* [CP] Embed Pods Frameworks */,
+				58550CC4A4A54276A6449889 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -219,9 +268,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1862B2642096E2A500839D14 /* Build configuration list for PBXNativeTarget "ShanyraqTests" */;
 			buildPhases = (
+				AA4A0D5D6ED42D61E2B39D75 /* [CP] Check Pods Manifest.lock */,
 				1862B2492096E2A400839D14 /* Sources */,
 				1862B24A2096E2A400839D14 /* Frameworks */,
 				1862B24B2096E2A400839D14 /* Resources */,
+				9DF8BC6D663368B0D7CC4155 /* [CP] Embed Pods Frameworks */,
+				5D7E5A7AEAB020FC8DCCA359 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,9 +289,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1862B2672096E2A500839D14 /* Build configuration list for PBXNativeTarget "ShanyraqUITests" */;
 			buildPhases = (
+				7F9D973A2510D24F024B40AB /* [CP] Check Pods Manifest.lock */,
 				1862B2542096E2A400839D14 /* Sources */,
 				1862B2552096E2A400839D14 /* Frameworks */,
 				1862B2562096E2A400839D14 /* Resources */,
+				88CEFDD1A7A439B1A011615A /* [CP] Embed Pods Frameworks */,
+				C374FB6675E9D012ED13AA83 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -303,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1862B2472096E2A400839D14 /* LaunchScreen.storyboard in Resources */,
+				1862B2802096E8BE00839D14 /* GoogleService-Info.plist in Resources */,
 				1862B27C2096E63D00839D14 /* ProximaNovaSoft-Regular.otf in Resources */,
 				1862B27A2096E63D00839D14 /* ProximaNovaSoft-Bold.otf in Resources */,
 				1862B2442096E2A400839D14 /* Assets.xcassets in Resources */,
@@ -328,6 +384,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2198610275B1277E7298555B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shanyraq/Pods-Shanyraq-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58550CC4A4A54276A6449889 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shanyraq/Pods-Shanyraq-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D7E5A7AEAB020FC8DCCA359 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShanyraqTests/Pods-ShanyraqTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F9D973A2510D24F024B40AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		88CEFDD1A7A439B1A011615A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShanyraqUITests/Pods-ShanyraqUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DF8BC6D663368B0D7CC4155 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShanyraqTests/Pods-ShanyraqTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA4A0D5D6ED42D61E2B39D75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AA4AE8D6CC299405A3F99A4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C374FB6675E9D012ED13AA83 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShanyraqUITests/Pods-ShanyraqUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1862B2322096E2A400839D14 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -336,8 +530,9 @@
 				1862B2712096E5A700839D14 /* Model.swift in Sources */,
 				1862B26F2096E2FF00839D14 /* Color+Fonts.swift in Sources */,
 				1862B2422096E2A400839D14 /* Shanyraq.xcdatamodeld in Sources */,
-				1862B23C2096E2A400839D14 /* ViewController.swift in Sources */,
+				1862B23C2096E2A400839D14 /* ProfileViewController.swift in Sources */,
 				1862B2742096E5EB00839D14 /* myView.swift in Sources */,
+				1862B2822096E96A00839D14 /* MyHomeViewController.swift in Sources */,
 				1862B23A2096E2A400839D14 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +689,7 @@
 		};
 		1862B2622096E2A500839D14 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BE6C9FED91E541E866FCBD6 /* Pods-Shanyraq.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -509,6 +705,7 @@
 		};
 		1862B2632096E2A500839D14 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48206E1A727B654E575163B6 /* Pods-Shanyraq.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -524,6 +721,7 @@
 		};
 		1862B2652096E2A500839D14 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0ABF23D4E8F8A2864A8F7C7 /* Pods-ShanyraqTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -540,6 +738,7 @@
 		};
 		1862B2662096E2A500839D14 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B39BF8AE72010DE3F58031BC /* Pods-ShanyraqTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -556,6 +755,7 @@
 		};
 		1862B2682096E2A500839D14 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B8F4FB9529BD710FC8F1941 /* Pods-ShanyraqUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -571,6 +771,7 @@
 		};
 		1862B2692096E2A500839D14 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D20F02DE0AB906A4706788E9 /* Pods-ShanyraqUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
