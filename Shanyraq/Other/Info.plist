@@ -12,6 +12,13 @@
 	<string>6.0</string>
 	<key>CFBundleName</key>
 	<string>$(PRODUCT_NAME)</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>ProximaNovaSoft-Bold.otf</string>
+		<string>ProximaNovaSoft-Medium.otf</string>
+		<string>ProximaNovaSoft-Regular.otf</string>
+		<string>ProximaNovaSoft-Semibold.otf</string>
+	</array>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
