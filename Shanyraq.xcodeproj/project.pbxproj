@@ -15,6 +15,8 @@
 		1862B2522096E2A400839D14 /* ShanyraqTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862B2512096E2A400839D14 /* ShanyraqTests.swift */; };
 		1862B25D2096E2A400839D14 /* ShanyraqUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862B25C2096E2A400839D14 /* ShanyraqUITests.swift */; };
 		1862B26F2096E2FF00839D14 /* Color+Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862B26E2096E2FF00839D14 /* Color+Fonts.swift */; };
+		1862B2712096E5A700839D14 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862B2702096E5A700839D14 /* Model.swift */; };
+		1862B2742096E5EB00839D14 /* myView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862B2732096E5EB00839D14 /* myView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		1862B25C2096E2A400839D14 /* ShanyraqUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShanyraqUITests.swift; sourceTree = "<group>"; };
 		1862B25E2096E2A400839D14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1862B26E2096E2FF00839D14 /* Color+Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Fonts.swift"; sourceTree = "<group>"; };
+		1862B2702096E5A700839D14 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		1862B2732096E5EB00839D14 /* myView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,16 +103,11 @@
 		1862B2382096E2A400839D14 /* Shanyraq */ = {
 			isa = PBXGroup;
 			children = (
+				1862B2722096E5B300839D14 /* Other */,
 				1862B26D2096E2EB00839D14 /* Extensions */,
 				1862B26A2096E2B900839D14 /* Model */,
 				1862B26B2096E2BF00839D14 /* View */,
 				1862B26C2096E2C500839D14 /* Controller */,
-				1862B2392096E2A400839D14 /* AppDelegate.swift */,
-				1862B23B2096E2A400839D14 /* ViewController.swift */,
-				1862B2432096E2A400839D14 /* Assets.xcassets */,
-				1862B2452096E2A400839D14 /* LaunchScreen.storyboard */,
-				1862B2482096E2A400839D14 /* Info.plist */,
-				1862B2402096E2A400839D14 /* Shanyraq.xcdatamodeld */,
 			);
 			path = Shanyraq;
 			sourceTree = "<group>";
@@ -134,6 +133,7 @@
 		1862B26A2096E2B900839D14 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1862B2702096E5A700839D14 /* Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -141,6 +141,7 @@
 		1862B26B2096E2BF00839D14 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1862B2732096E5EB00839D14 /* myView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -148,6 +149,7 @@
 		1862B26C2096E2C500839D14 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1862B23B2096E2A400839D14 /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -158,6 +160,18 @@
 				1862B26E2096E2FF00839D14 /* Color+Fonts.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1862B2722096E5B300839D14 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				1862B2432096E2A400839D14 /* Assets.xcassets */,
+				1862B2452096E2A400839D14 /* LaunchScreen.storyboard */,
+				1862B2482096E2A400839D14 /* Info.plist */,
+				1862B2402096E2A400839D14 /* Shanyraq.xcdatamodeld */,
+				1862B2392096E2A400839D14 /* AppDelegate.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,9 +307,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1862B2712096E5A700839D14 /* Model.swift in Sources */,
 				1862B26F2096E2FF00839D14 /* Color+Fonts.swift in Sources */,
 				1862B2422096E2A400839D14 /* Shanyraq.xcdatamodeld in Sources */,
 				1862B23C2096E2A400839D14 /* ViewController.swift in Sources */,
+				1862B2742096E5EB00839D14 /* myView.swift in Sources */,
 				1862B23A2096E2A400839D14 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
