@@ -46,7 +46,7 @@ class MyHomeViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.itemSize = CGSize(width:self.view.frame.width/2 - 25, height:self.self.view.frame.width/2 - 25)
-        layout.minimumLineSpacing = 15
+        layout.minimumLineSpacing = 10
         layout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         return layout
     }()
@@ -55,7 +55,7 @@ class MyHomeViewController: UIViewController {
         setupNavBar()
         setupConstraints()
      
-        print((Auth.auth().currentUser?.email)!)
+//        print((Auth.auth().currentUser?.email)!)
         [profileTitle,collectionView].forEach{
             self.view.addSubview($0)
         }
@@ -81,7 +81,7 @@ class MyHomeViewController: UIViewController {
         let addButton = UIButton(type: .custom)
         addButton.setImage(#imageLiteral(resourceName: "add"), for: .normal)
         addButton.frame = CGRect(x: 0.0, y: 0.0, width: 35.0, height: 35.0)
-        
+        addButton.addTarget(self, action: #selector(addRoom), for: .touchUpInside)
         let newFont = UIFont(name: Standart.myRegular.rawValue, size: 16)!
 
         
@@ -97,6 +97,10 @@ class MyHomeViewController: UIViewController {
         self.navigationItem.rightBarButtonItems = [rightSideView,seconRightSideView]
         
         
+    }
+    @objc func addRoom(){
+        let nv = AddRoomsViewController()
+        navigationController?.pushViewController(nv, animated: true)
     }
     override func setEditing (_ editing:Bool, animated:Bool)
     {
@@ -117,9 +121,9 @@ class MyHomeViewController: UIViewController {
     }
 //constraints
     func setupConstraints(){
-        self.profileTitle.frame = CGRect(x: 0, y: 24, width: self.view.frame.width/2, height: self.view.frame.height/12)
+        self.profileTitle.frame = CGRect(x: 0, y: 16, width: self.view.frame.width/2, height: self.view.frame.height/12)
         self.profileTitle.center.x = self.view.center.x
-        self.collectionView.frame = CGRect(x: 0, y: self.profileTitle.frame.maxY + 8, width: self.view.frame.width, height: self.view.frame.height)
+        self.collectionView.frame = CGRect(x: 0, y: self.profileTitle.frame.maxY, width: self.view.frame.width, height: self.view.frame.height)
     }
 
     

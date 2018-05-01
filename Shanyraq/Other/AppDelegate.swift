@@ -25,11 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     fileprivate func coordinateAppFlow() {
-        if ((Auth.auth().currentUser) != nil) {
-            loadMainPages()
-        } else {
-            loadMainPages()
-        }
+        loadMainPages()
+//        if ((Auth.auth().currentUser) != nil) {
+//            loadMainPages()
+//        } else {
+//            loadMainPages()
+//        }
     }
     func setupWindow(){
         UINavigationBar.appearance().backgroundColor = .white
@@ -46,12 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let first = MyHomeViewController()
         first.view.backgroundColor = .backgroundColor
         nav1.viewControllers = [first]
-        nav1.tabBarItem = UITabBarItem(title: "My", image: #imageLiteral(resourceName: "home_grey"), tag: 1)
-//        first.navigationController?.navigationBar.layer.shadowColor = UIColor.lightGray.cgColor
-//        first.navigationController?.navigationBar.layer.shadowOpacity = 0.5
-//        first.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 1.0)
-//        first.navigationController?.navigationBar.layer.shadowRadius = 1.0
-//        first.navigationController?.navigationBar.layer.masksToBounds = false
+        nav1.tabBarItem = UITabBarItem(title: "My home", image: #imageLiteral(resourceName: "home_grey"), tag: 1)
         
         let nav2 = UINavigationController()
         let second = ProfileViewController()

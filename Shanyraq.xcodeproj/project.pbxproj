@@ -11,6 +11,8 @@
 		1816058620982F3D00861614 /* TopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1816058520982F3D00861614 /* TopCollectionViewCell.swift */; };
 		1816058820982F4800861614 /* BottomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1816058720982F4800861614 /* BottomCollectionViewCell.swift */; };
 		1816058A20984FB300861614 /* DevicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1816058920984FB300861614 /* DevicesCollectionViewCell.swift */; };
+		1852938F2098950C00E2F4F2 /* AddRoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852938E2098950C00E2F4F2 /* AddRoomsViewController.swift */; };
+		185293912098A08F00E2F4F2 /* AddDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185293902098A08F00E2F4F2 /* AddDeviceViewController.swift */; };
 		1862B23A2096E2A400839D14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862B2392096E2A400839D14 /* AppDelegate.swift */; };
 		1862B23C2096E2A400839D14 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862B23B2096E2A400839D14 /* ProfileViewController.swift */; };
 		1862B2422096E2A400839D14 /* Shanyraq.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1862B2402096E2A400839D14 /* Shanyraq.xcdatamodeld */; };
@@ -56,6 +58,8 @@
 		1816058520982F3D00861614 /* TopCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCollectionViewCell.swift; sourceTree = "<group>"; };
 		1816058720982F4800861614 /* BottomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCollectionViewCell.swift; sourceTree = "<group>"; };
 		1816058920984FB300861614 /* DevicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesCollectionViewCell.swift; sourceTree = "<group>"; };
+		1852938E2098950C00E2F4F2 /* AddRoomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRoomsViewController.swift; sourceTree = "<group>"; };
+		185293902098A08F00E2F4F2 /* AddDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceViewController.swift; sourceTree = "<group>"; };
 		1862B2362096E2A400839D14 /* Shanyraq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shanyraq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1862B2392096E2A400839D14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1862B23B2096E2A400839D14 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -203,7 +207,9 @@
 			isa = PBXGroup;
 			children = (
 				1862B2812096E96A00839D14 /* MyHomeViewController.swift */,
+				1852938E2098950C00E2F4F2 /* AddRoomsViewController.swift */,
 				1816058020977EAC00861614 /* AboutRoomViewController.swift */,
+				185293902098A08F00E2F4F2 /* AddDeviceViewController.swift */,
 				1862B23B2096E2A400839D14 /* ProfileViewController.swift */,
 			);
 			path = Controller;
@@ -552,7 +558,9 @@
 			files = (
 				1816058A20984FB300861614 /* DevicesCollectionViewCell.swift in Sources */,
 				1862B2712096E5A700839D14 /* Model.swift in Sources */,
+				185293912098A08F00E2F4F2 /* AddDeviceViewController.swift in Sources */,
 				1862B26F2096E2FF00839D14 /* Color+Fonts.swift in Sources */,
+				1852938F2098950C00E2F4F2 /* AddRoomsViewController.swift in Sources */,
 				1816058120977EAC00861614 /* AboutRoomViewController.swift in Sources */,
 				1862B2422096E2A400839D14 /* Shanyraq.xcdatamodeld in Sources */,
 				1862B23C2096E2A400839D14 /* ProfileViewController.swift in Sources */,

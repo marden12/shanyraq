@@ -9,6 +9,7 @@
 import UIKit
 
 class DevicesCollectionViewCell: UICollectionViewCell {
+   
     lazy var deleteButton: UIButton = {
         let button = UIButton()
         button.setImage(#imageLiteral(resourceName: "delete"), for: .normal)
@@ -16,16 +17,39 @@ class DevicesCollectionViewCell: UICollectionViewCell {
         button.isHidden = true
         return button
     }()
+    lazy var imageIcon: UIImageView = {
+        let img = UIImageView()
+        return img
+    }()
+    lazy var deviceName: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: Standart.myRegular.rawValue, size: 14)
+        return label
+    }()
+    lazy var deviceStatus: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: Standart.myRegular.rawValue, size: 14)
+        label.textColor = .newGray
+        return label
+    }()
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.sizeToFit()
         self.addSubview(deleteButton)
+        self.addSubview(imageIcon)
+        self.addSubview(deviceStatus)
+        self.addSubview(deviceName)
         setupConstraints()
         makeShadow(cell: self)
     }
    
     func setupConstraints(){
         self.deleteButton.frame = CGRect(x: self.frame.width - 25 , y: -10, width: 32, height: 32)
+        self.imageIcon.frame.origin = CGPoint(x: 5, y: 5)
+        self.deviceName.frame = CGRect(x: 5, y: 50, width: 100, height: 20)
+        self.deviceStatus.frame = CGRect(x: 5, y: self.deviceName.frame.maxY, width: 100, height: 20)
+        
+       
         
     }
     required init?(coder aDecoder: NSCoder) {

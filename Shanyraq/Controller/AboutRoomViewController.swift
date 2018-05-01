@@ -13,10 +13,12 @@ class AboutRoomViewController: UIViewController {
     let screen = UIScreen.main.bounds
     var selectedIndexPath: IndexPath?
     var isHide = true
+    var update = false
     var bcv = BottomCollectionViewCell()
+    var firstSelected = Bool()
     fileprivate lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: self.layout)
-        collectionView.backgroundColor = .red
+        collectionView.backgroundColor = .backgroundColor
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(BottomCollectionViewCell.self, forCellWithReuseIdentifier: "myCell")
@@ -30,7 +32,7 @@ class AboutRoomViewController: UIViewController {
         layout.itemSize = CGSize(width: width, height: height)
         layout.minimumInteritemSpacing = 10
         layout.scrollDirection = .horizontal
-
+        
         return layout
     }()
     
@@ -100,26 +102,18 @@ class AboutRoomViewController: UIViewController {
         
         
     }
-    override func setEditing (_ editing:Bool, animated:Bool)
-    {
+    override func setEditing (_ editing:Bool, animated:Bool){
+        print("pressed")
         super.setEditing(editing,animated:animated)
-        if(self.isEditing)
-        {
+        if(self.isEditing){
             let newFont = UIFont(name: Standart.myRegular.rawValue, size: 16)!
             self.editButtonItem.title = "Cancel"
             self.editButtonItem.setTitleTextAttributes([NSAttributedStringKey.font: newFont], for: .normal)
-            isHide = false
-            DispatchQueue.main.async {
-                self.bcv.collectionView.reloadData()
-            }
+            update = true
             collectionView.reloadData()
         }else{
             self.editButtonItem.title = "Edit"
-
-            isHide = true
-            DispatchQueue.main.async {
-                self.bcv.collectionView.reloadData()
-            }
+            update = false
             collectionView.reloadData()
         }
     }
@@ -139,21 +133,26 @@ extension AboutRoomViewController: UICollectionViewDelegate,UICollectionViewData
         return 3
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
+        
         if collectionView == self.collectionView{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! BottomCollectionViewCell
             cell.backgroundColor = .backgroundColor
-            cell.isHide = isHide
+            cell.update = update
+
             return cell
         }else{
             let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! TopCollectionViewCell
             cell2.backgroundColor = .white
             cell2.text.text = "Living Room"
+            if indexPath.row == 0 {
+                cell2.text.setBottomBorder()
+                firstSelected = true
+            }
             return cell2
         }
         
     }
-   
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         if collectionView == self.collectionView2{
@@ -161,7 +160,6 @@ extension AboutRoomViewController: UICollectionViewDelegate,UICollectionViewData
             let selectedRow = collectionView.cellForItem(at: indexPath) as! TopCollectionViewCell
             selectedRow.text.setBottomBorder()
             self.selectedIndexPath = indexPath
-            
         }else{
             print("Section 2 is tapped")
         }
@@ -170,15 +168,32 @@ extension AboutRoomViewController: UICollectionViewDelegate,UICollectionViewData
         let deselected = collectionView2.cellForItem(at: indexPath) as! TopCollectionViewCell
         deselected.text.setWhiteBottomBorder()
         selectedIndexPath = nil
+        if (firstSelected) {
+            let index = IndexPath(row: 0, section: 0)
+            let deselected = collectionView2.cellForItem(at: index) as! TopCollectionViewCell
+            firstSelected = false
+            deselected.text.setWhiteBottomBorder()
+        }
     }
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         
-        if collectionView == self.collectionView{
+        if collectionView == self.collectionView {
+            print("\(indexPath.row)  ---> display cell")
             self.collectionView2.scrollToItem(at: indexPath, at: .right, animated: true)
+            
+            let selectCell = collectionView2.cellForItem(at: indexPath) as! TopCollectionViewCell
+            selectCell.text.setBottomBorder()
+            
+            for i in 0...2{
+                let index = IndexPath(row: i, section: 0)
+                if (index != indexPath) {
+                    let deselectCell = collectionView2.cellForItem(at: index) as? TopCollectionViewCell
+                    deselectCell?.text.setWhiteBottomBorder()
+                }
+            }
+            
             self.selectedIndexPath = indexPath
             
-        }else{
-            print("Section 2 is tapped")
         }
     }
 }
@@ -203,3 +218,4 @@ extension UIView {
         self.layer.shadowRadius = 0.0
     }
 }
+
