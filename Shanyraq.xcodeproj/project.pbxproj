@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1816058120977EAC00861614 /* AboutRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1816058020977EAC00861614 /* AboutRoomViewController.swift */; };
+		1816058620982F3D00861614 /* TopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1816058520982F3D00861614 /* TopCollectionViewCell.swift */; };
+		1816058820982F4800861614 /* BottomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1816058720982F4800861614 /* BottomCollectionViewCell.swift */; };
+		1816058A20984FB300861614 /* DevicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1816058920984FB300861614 /* DevicesCollectionViewCell.swift */; };
 		1862B23A2096E2A400839D14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862B2392096E2A400839D14 /* AppDelegate.swift */; };
 		1862B23C2096E2A400839D14 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862B23B2096E2A400839D14 /* ProfileViewController.swift */; };
 		1862B2422096E2A400839D14 /* Shanyraq.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1862B2402096E2A400839D14 /* Shanyraq.xcdatamodeld */; };
@@ -16,7 +20,7 @@
 		1862B25D2096E2A400839D14 /* ShanyraqUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862B25C2096E2A400839D14 /* ShanyraqUITests.swift */; };
 		1862B26F2096E2FF00839D14 /* Color+Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862B26E2096E2FF00839D14 /* Color+Fonts.swift */; };
 		1862B2712096E5A700839D14 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862B2702096E5A700839D14 /* Model.swift */; };
-		1862B2742096E5EB00839D14 /* myView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862B2732096E5EB00839D14 /* myView.swift */; };
+		1862B2742096E5EB00839D14 /* titleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862B2732096E5EB00839D14 /* titleView.swift */; };
 		1862B27A2096E63D00839D14 /* ProximaNovaSoft-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1862B2762096E63C00839D14 /* ProximaNovaSoft-Bold.otf */; };
 		1862B27B2096E63D00839D14 /* ProximaNovaSoft-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1862B2772096E63C00839D14 /* ProximaNovaSoft-Medium.otf */; };
 		1862B27C2096E63D00839D14 /* ProximaNovaSoft-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1862B2782096E63C00839D14 /* ProximaNovaSoft-Regular.otf */; };
@@ -24,6 +28,7 @@
 		1862B27E2096E68100839D14 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1862B2482096E2A400839D14 /* Info.plist */; };
 		1862B2802096E8BE00839D14 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1862B27F2096E8BD00839D14 /* GoogleService-Info.plist */; };
 		1862B2822096E96A00839D14 /* MyHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862B2812096E96A00839D14 /* MyHomeViewController.swift */; };
+		1862B284209716D700839D14 /* RoomsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862B283209716D700839D14 /* RoomsCollectionViewCell.swift */; };
 		343BBEBAE01BEE9CF23410F1 /* Pods_ShanyraqUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52EC85A2D32D45E4497EA4A /* Pods_ShanyraqUITests.framework */; };
 		5093E3F592C5D89FAA05D909 /* Pods_Shanyraq.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE20338484B1DC1BF622225A /* Pods_Shanyraq.framework */; };
 		9212FBC43C7ECF248D8AE81F /* Pods_ShanyraqTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE774DAAAABB9D1688E7691 /* Pods_ShanyraqTests.framework */; };
@@ -47,6 +52,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1816058020977EAC00861614 /* AboutRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutRoomViewController.swift; sourceTree = "<group>"; };
+		1816058520982F3D00861614 /* TopCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCollectionViewCell.swift; sourceTree = "<group>"; };
+		1816058720982F4800861614 /* BottomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCollectionViewCell.swift; sourceTree = "<group>"; };
+		1816058920984FB300861614 /* DevicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesCollectionViewCell.swift; sourceTree = "<group>"; };
 		1862B2362096E2A400839D14 /* Shanyraq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shanyraq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1862B2392096E2A400839D14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1862B23B2096E2A400839D14 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -62,13 +71,14 @@
 		1862B25E2096E2A400839D14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1862B26E2096E2FF00839D14 /* Color+Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Fonts.swift"; sourceTree = "<group>"; };
 		1862B2702096E5A700839D14 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		1862B2732096E5EB00839D14 /* myView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myView.swift; sourceTree = "<group>"; };
+		1862B2732096E5EB00839D14 /* titleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = titleView.swift; sourceTree = "<group>"; };
 		1862B2762096E63C00839D14 /* ProximaNovaSoft-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaSoft-Bold.otf"; sourceTree = "<group>"; };
 		1862B2772096E63C00839D14 /* ProximaNovaSoft-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaSoft-Medium.otf"; sourceTree = "<group>"; };
 		1862B2782096E63C00839D14 /* ProximaNovaSoft-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaSoft-Regular.otf"; sourceTree = "<group>"; };
 		1862B2792096E63D00839D14 /* ProximaNovaSoft-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaSoft-Semibold.otf"; sourceTree = "<group>"; };
 		1862B27F2096E8BD00839D14 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1862B2812096E96A00839D14 /* MyHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHomeViewController.swift; sourceTree = "<group>"; };
+		1862B283209716D700839D14 /* RoomsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsCollectionViewCell.swift; sourceTree = "<group>"; };
 		2AE774DAAAABB9D1688E7691 /* Pods_ShanyraqTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShanyraqTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48206E1A727B654E575163B6 /* Pods-Shanyraq.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shanyraq.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shanyraq/Pods-Shanyraq.release.xcconfig"; sourceTree = "<group>"; };
 		7B8F4FB9529BD710FC8F1941 /* Pods-ShanyraqUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShanyraqUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShanyraqUITests/Pods-ShanyraqUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -108,6 +118,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1816058420982F1400861614 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1862B283209716D700839D14 /* RoomsCollectionViewCell.swift */,
+				1816058520982F3D00861614 /* TopCollectionViewCell.swift */,
+				1816058720982F4800861614 /* BottomCollectionViewCell.swift */,
+				1816058920984FB300861614 /* DevicesCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		1862B22D2096E2A400839D14 = {
 			isa = PBXGroup;
 			children = (
@@ -172,7 +193,8 @@
 		1862B26B2096E2BF00839D14 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1862B2732096E5EB00839D14 /* myView.swift */,
+				1862B2732096E5EB00839D14 /* titleView.swift */,
+				1816058420982F1400861614 /* Cells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -180,8 +202,9 @@
 		1862B26C2096E2C500839D14 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1862B23B2096E2A400839D14 /* ProfileViewController.swift */,
 				1862B2812096E96A00839D14 /* MyHomeViewController.swift */,
+				1816058020977EAC00861614 /* AboutRoomViewController.swift */,
+				1862B23B2096E2A400839D14 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -527,13 +550,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1816058A20984FB300861614 /* DevicesCollectionViewCell.swift in Sources */,
 				1862B2712096E5A700839D14 /* Model.swift in Sources */,
 				1862B26F2096E2FF00839D14 /* Color+Fonts.swift in Sources */,
+				1816058120977EAC00861614 /* AboutRoomViewController.swift in Sources */,
 				1862B2422096E2A400839D14 /* Shanyraq.xcdatamodeld in Sources */,
 				1862B23C2096E2A400839D14 /* ProfileViewController.swift in Sources */,
-				1862B2742096E5EB00839D14 /* myView.swift in Sources */,
+				1862B2742096E5EB00839D14 /* titleView.swift in Sources */,
 				1862B2822096E96A00839D14 /* MyHomeViewController.swift in Sources */,
 				1862B23A2096E2A400839D14 /* AppDelegate.swift in Sources */,
+				1816058820982F4800861614 /* BottomCollectionViewCell.swift in Sources */,
+				1816058620982F3D00861614 /* TopCollectionViewCell.swift in Sources */,
+				1862B284209716D700839D14 /* RoomsCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,6 +723,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2Y62544U83;
 				INFOPLIST_FILE = Shanyraq/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-50107085.Shanyraq";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -711,6 +740,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2Y62544U83;
 				INFOPLIST_FILE = Shanyraq/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-50107085.Shanyraq";
 				PRODUCT_NAME = "$(TARGET_NAME)";

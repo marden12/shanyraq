@@ -33,10 +33,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     func setupWindow(){
         UINavigationBar.appearance().backgroundColor = .white
-        UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().barTintColor = .white
+        UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        UINavigationBar.appearance().tintColor = .black
+        
     }
     
     func loadMainPages() {
@@ -45,6 +47,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         first.view.backgroundColor = .backgroundColor
         nav1.viewControllers = [first]
         nav1.tabBarItem = UITabBarItem(title: "My", image: #imageLiteral(resourceName: "home_grey"), tag: 1)
+//        first.navigationController?.navigationBar.layer.shadowColor = UIColor.lightGray.cgColor
+//        first.navigationController?.navigationBar.layer.shadowOpacity = 0.5
+//        first.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+//        first.navigationController?.navigationBar.layer.shadowRadius = 1.0
+//        first.navigationController?.navigationBar.layer.masksToBounds = false
         
         let nav2 = UINavigationController()
         let second = ProfileViewController()

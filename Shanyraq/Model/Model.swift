@@ -6,4 +6,10 @@
 //  Copyright © 2018 Dayana Marden. All rights reserved.
 //
 
-import Foundation
+import UIKit
+struct Rooms {
+    var name: String!
+    var items: [String]!
+    var image: UIImage!
+    var image_url: String!
+}
