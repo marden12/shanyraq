@@ -32,14 +32,7 @@ class Goods {
         self.imageURLs = imageURLs
     }
     
-    var databaseRef: DatabaseReference! {
-        return Database.database().reference()
-    }
     
-    var storageRef: StorageReference! {
-        
-        return Storage.storage().reference()
-    }
     
   
     

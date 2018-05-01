@@ -7,8 +7,16 @@
 //
 
 import UIKit
-
+import Firebase
 class AddRoomsViewController: UIViewController {
+    var databaseRef: DatabaseReference! {
+        return Database.database().reference()
+    }
+    
+    var storageRef: StorageReference! {
+        
+        return Storage.storage().reference()
+    }
     lazy var addPhoto: UIButton = {
         let button = UIButton()
         button.setImage(#imageLiteral(resourceName: "upload_ph"), for: .normal)
@@ -65,7 +73,7 @@ class AddRoomsViewController: UIViewController {
         editButton.setTitleColor(.newRed, for: .normal)
         editButton.backgroundColor = .clear
         editButton.sizeToFit()
-        
+        editButton.addTarget(self, action: #selector(uploadData), for: .touchUpInside)
         let newFont = UIFont(name: Standart.myRegular.rawValue, size: 16)!
         let seconRightSideView = UIBarButtonItem(customView: editButton)
         seconRightSideView.setTitleTextAttributes([NSAttributedStringKey.font: newFont], for: .normal)
@@ -76,6 +84,7 @@ class AddRoomsViewController: UIViewController {
         
         
     }
+    
 }
 extension AddRoomsViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func handleSelectGoodsImageView() {
@@ -104,4 +113,32 @@ extension AddRoomsViewController: UIImagePickerControllerDelegate, UINavigationC
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
+    @objc func uploadData(){
+            let image = addPhoto.imageView?.image
+            // свой image переводишь в дату
+            if let imageData = UIImageJPEGRepresentation(image!, 0.6) {
+                //upload imageData to storage
+                storageRef.child((Auth.auth().currentUser?.uid)!).child("\(titleTextField.text!)+\(String(describing: image))").putData(imageData, metadata: nil, completion: { (metadata, error) in
+                    if error != nil {
+                        print(error!.localizedDescription)
+                        print("Error")
+                    }
+                    // в сторэйдже она уже с url хранится
+                    if let ImageUrl = metadata?.downloadURL()?.absoluteString {
+                        
+                        DispatchQueue.main.async {
+                            
+                            if ImageUrl != "" {
+                                let userInfo = ["name": self.titleTextField.text!, "ImageURL" : ImageUrl] as [String : Any]
+                                let userRef = self.databaseRef.child("room").child((Auth.auth().currentUser?.uid)!).child(self.titleTextField.text!).childByAutoId()
+                                _ = userRef.key
+                                userRef.setValue(userInfo)
+                            }
+                        }
+                        
+                    }
+                })
+            }
+        }
+    
 }
