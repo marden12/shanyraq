@@ -7,11 +7,12 @@
 //
 
 import UIKit
-
+import Firebase
 class RoomsCollectionViewCell: UICollectionViewCell {
     lazy var roomImageView: UIImageView = {
         let img = UIImageView()
-        img.image = #imageLiteral(resourceName: "bed_room")
+//        img.image = #imageLiteral(resourceName: "bed_room")
+        img.layer.cornerRadius = 10
         return img
     }()
     lazy var nameOfRoom: UILabel = {
@@ -34,19 +35,32 @@ class RoomsCollectionViewCell: UICollectionViewCell {
         button.setImage(#imageLiteral(resourceName: "delete"), for: .normal)
         button.isUserInteractionEnabled = true
         button.isHidden = true
-        button.tag = 102
+        
         return button
     }()
+    var good : Rooms! {
+        didSet {
+                    }
+    }
+    
+    var addPressed : Bool!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.setupViews()
+        self.setupConstraints()
+        self.receiveData()
+
+    }
+    func setupViews(){
         self.layer.cornerRadius = 10
         self.addSubview(roomImageView)
         self.addSubview(nameOfRoom)
         self.addSubview(numberOfItems)
         self.addSubview(deleteButton)
-        setupConstraints()
-    }
 
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -58,6 +72,11 @@ class RoomsCollectionViewCell: UICollectionViewCell {
         self.numberOfItems.center.y = self.roomImageView.center.y + 24
         self.numberOfItems.center.x = self.roomImageView.center.x
         self.deleteButton.frame = CGRect(x: self.roomImageView.frame.maxX - 25, y: self.roomImageView.frame.minY - 10, width: 32, height: 32)
+        self.layer.cornerRadius = 10
+        self.backgroundColor = .clear
         
+    }
+    func receiveData(){
+
     }
 }

@@ -11,6 +11,7 @@ import Firebase
 import FirebaseAuth
 import FirebaseStorage
 import FirebaseDatabase
+import CoreData
 extension UILabel {
     func halfTextColorChange (fullText : String , changeText : String) {
         let strNumber: NSString = fullText as NSString
@@ -24,7 +25,17 @@ extension UILabel {
 class MyHomeViewController: UIViewController {
     var numberApha = 0
     var isHide = true
+    
     var roomsArray: [Rooms] = []
+    var roomsData : [RoomsData] = []
+    var imagesArray = [#imageLiteral(resourceName: "kitchen_room"),#imageLiteral(resourceName: "living_room"),#imageLiteral(resourceName: "bed_room")]
+    var textArray = ["Kitchen","Living Room","BedRoom"]
+    var image_url: String = ""
+    var databaseRef: DatabaseReference!{
+        return Database.database().reference()
+    }
+    var array: [String] = []
+    var array2: [String] = []
     lazy var profileTitle: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: Standart.myRegular.rawValue, size: 20)
@@ -48,17 +59,45 @@ class MyHomeViewController: UIViewController {
         layout.itemSize = CGSize(width:self.view.frame.width/2 - 25, height:self.self.view.frame.width/2 - 25)
         layout.minimumLineSpacing = 10
         layout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        layout.sectionInset.bottom = 100
         return layout
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
         setupConstraints()
-     
-//        print((Auth.auth().currentUser?.email)!)
         [profileTitle,collectionView].forEach{
             self.view.addSubview($0)
         }
+        collectionView.reloadData()
+
+
+    }
+
+
+    func fetchData(){
+        print("fetchData")
+        self.roomsArray.removeAll()
+        databaseRef.child("room").child((Auth.auth().currentUser?.uid)!).observe(.childAdded, with: {
+            snapshot in
+            
+                let snapshotValue = snapshot.value as? NSDictionary
+                let name = snapshotValue?["name"] as? String
+                let photoUrl = snapshotValue?["ImageURL"] as? String
+                DispatchQueue.main.async {
+                    let model  = Rooms(name: name!,image_URL: photoUrl!)
+                    self.roomsArray.insert(model, at: 0)
+                    print(self.roomsArray)
+                    self.collectionView.reloadData()
+                    
+                }
+
+        })
+        
+        
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        fetchData()
     }
 //nav bar config
     func setupNavBar(){
@@ -100,13 +139,14 @@ class MyHomeViewController: UIViewController {
     }
     @objc func addRoom(){
         let nv = AddRoomsViewController()
-        navigationController?.pushViewController(nv, animated: true)
+        self.present(nv, animated: true, completion: nil)
     }
-    override func setEditing (_ editing:Bool, animated:Bool)
-    {
+    override func viewDidLayoutSubviews() {
+        self.collectionView.reloadData()
+    }
+    override func setEditing (_ editing:Bool, animated:Bool){
         super.setEditing(editing,animated:animated)
-        if(self.isEditing)
-        {
+        if(self.isEditing){
             let newFont = UIFont(name: Standart.myRegular.rawValue, size: 16)!
             self.editButtonItem.title = "Cancel"
             self.editButtonItem.setTitleTextAttributes([NSAttributedStringKey.font: newFont], for: .normal)
@@ -119,6 +159,9 @@ class MyHomeViewController: UIViewController {
             collectionView.reloadData()
         }
     }
+  
+
+    
 //constraints
     func setupConstraints(){
         self.profileTitle.frame = CGRect(x: 0, y: 16, width: self.view.frame.width/2, height: self.view.frame.height/12)
@@ -134,12 +177,24 @@ extension MyHomeViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! RoomsCollectionViewCell
-        cell.nameOfRoom.text = "Kitchen"
+    
+        cell.nameOfRoom.text = textArray[indexPath.row]
         cell.deleteButton.isHidden = isHide
+        cell.roomImageView.image = imagesArray[indexPath.row]
+
+        
+        
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         let nv = AboutRoomViewController()
+        nv.namesArray = textArray
+        nv.imagesArray = imagesArray
         navigationController?.pushViewController(nv, animated: true)
+    }
+    @objc func deleteRoom(index: Int){
+        roomsArray.remove(at: index)
+        self.collectionView.reloadData()
     }
 }

@@ -13,6 +13,8 @@
 		1816058A20984FB300861614 /* DevicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1816058920984FB300861614 /* DevicesCollectionViewCell.swift */; };
 		1852938F2098950C00E2F4F2 /* AddRoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852938E2098950C00E2F4F2 /* AddRoomsViewController.swift */; };
 		185293912098A08F00E2F4F2 /* AddDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185293902098A08F00E2F4F2 /* AddDeviceViewController.swift */; };
+		185293932098E59300E2F4F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 185293922098E59300E2F4F2 /* GoogleService-Info.plist */; };
+		18529395209C3C6100E2F4F2 /* DeviceControllingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18529394209C3C6100E2F4F2 /* DeviceControllingViewController.swift */; };
 		1862B23A2096E2A400839D14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862B2392096E2A400839D14 /* AppDelegate.swift */; };
 		1862B23C2096E2A400839D14 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862B23B2096E2A400839D14 /* ProfileViewController.swift */; };
 		1862B2422096E2A400839D14 /* Shanyraq.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1862B2402096E2A400839D14 /* Shanyraq.xcdatamodeld */; };
@@ -28,7 +30,6 @@
 		1862B27C2096E63D00839D14 /* ProximaNovaSoft-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1862B2782096E63C00839D14 /* ProximaNovaSoft-Regular.otf */; };
 		1862B27D2096E63D00839D14 /* ProximaNovaSoft-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1862B2792096E63D00839D14 /* ProximaNovaSoft-Semibold.otf */; };
 		1862B27E2096E68100839D14 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1862B2482096E2A400839D14 /* Info.plist */; };
-		1862B2802096E8BE00839D14 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1862B27F2096E8BD00839D14 /* GoogleService-Info.plist */; };
 		1862B2822096E96A00839D14 /* MyHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862B2812096E96A00839D14 /* MyHomeViewController.swift */; };
 		1862B284209716D700839D14 /* RoomsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862B283209716D700839D14 /* RoomsCollectionViewCell.swift */; };
 		343BBEBAE01BEE9CF23410F1 /* Pods_ShanyraqUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52EC85A2D32D45E4497EA4A /* Pods_ShanyraqUITests.framework */; };
@@ -60,6 +61,8 @@
 		1816058920984FB300861614 /* DevicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesCollectionViewCell.swift; sourceTree = "<group>"; };
 		1852938E2098950C00E2F4F2 /* AddRoomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRoomsViewController.swift; sourceTree = "<group>"; };
 		185293902098A08F00E2F4F2 /* AddDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceViewController.swift; sourceTree = "<group>"; };
+		185293922098E59300E2F4F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		18529394209C3C6100E2F4F2 /* DeviceControllingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceControllingViewController.swift; sourceTree = "<group>"; };
 		1862B2362096E2A400839D14 /* Shanyraq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shanyraq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1862B2392096E2A400839D14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1862B23B2096E2A400839D14 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -80,7 +83,6 @@
 		1862B2772096E63C00839D14 /* ProximaNovaSoft-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaSoft-Medium.otf"; sourceTree = "<group>"; };
 		1862B2782096E63C00839D14 /* ProximaNovaSoft-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaSoft-Regular.otf"; sourceTree = "<group>"; };
 		1862B2792096E63D00839D14 /* ProximaNovaSoft-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaSoft-Semibold.otf"; sourceTree = "<group>"; };
-		1862B27F2096E8BD00839D14 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1862B2812096E96A00839D14 /* MyHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHomeViewController.swift; sourceTree = "<group>"; };
 		1862B283209716D700839D14 /* RoomsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsCollectionViewCell.swift; sourceTree = "<group>"; };
 		2AE774DAAAABB9D1688E7691 /* Pods_ShanyraqTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShanyraqTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -210,6 +212,7 @@
 				1852938E2098950C00E2F4F2 /* AddRoomsViewController.swift */,
 				1816058020977EAC00861614 /* AboutRoomViewController.swift */,
 				185293902098A08F00E2F4F2 /* AddDeviceViewController.swift */,
+				18529394209C3C6100E2F4F2 /* DeviceControllingViewController.swift */,
 				1862B23B2096E2A400839D14 /* ProfileViewController.swift */,
 			);
 			path = Controller;
@@ -231,7 +234,7 @@
 				1862B2452096E2A400839D14 /* LaunchScreen.storyboard */,
 				1862B2402096E2A400839D14 /* Shanyraq.xcdatamodeld */,
 				1862B2392096E2A400839D14 /* AppDelegate.swift */,
-				1862B27F2096E8BD00839D14 /* GoogleService-Info.plist */,
+				185293922098E59300E2F4F2 /* GoogleService-Info.plist */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -387,7 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1862B2472096E2A400839D14 /* LaunchScreen.storyboard in Resources */,
-				1862B2802096E8BE00839D14 /* GoogleService-Info.plist in Resources */,
+				185293932098E59300E2F4F2 /* GoogleService-Info.plist in Resources */,
 				1862B27C2096E63D00839D14 /* ProximaNovaSoft-Regular.otf in Resources */,
 				1862B27A2096E63D00839D14 /* ProximaNovaSoft-Bold.otf in Resources */,
 				1862B2442096E2A400839D14 /* Assets.xcassets in Resources */,
@@ -557,6 +560,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1816058A20984FB300861614 /* DevicesCollectionViewCell.swift in Sources */,
+				18529395209C3C6100E2F4F2 /* DeviceControllingViewController.swift in Sources */,
 				1862B2712096E5A700839D14 /* Model.swift in Sources */,
 				185293912098A08F00E2F4F2 /* AddDeviceViewController.swift in Sources */,
 				1862B26F2096E2FF00839D14 /* Color+Fonts.swift in Sources */,
@@ -729,11 +733,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2Y62544U83;
+				DEVELOPMENT_TEAM = CNKAME49WY;
 				INFOPLIST_FILE = Shanyraq/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-50107085.Shanyraq";
+				PRODUCT_BUNDLE_IDENTIFIER = "-50107085.Shanygraq";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -746,11 +750,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2Y62544U83;
+				DEVELOPMENT_TEAM = CNKAME49WY;
 				INFOPLIST_FILE = Shanyraq/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-50107085.Shanyraq";
+				PRODUCT_BUNDLE_IDENTIFIER = "-50107085.Shanygraq";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

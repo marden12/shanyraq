@@ -8,6 +8,8 @@
 
 import UIKit
 
+@available(iOS 10.2, *)
+@available(iOS 10.2, *)
 class AboutRoomViewController: UIViewController {
     
     let screen = UIScreen.main.bounds
@@ -16,6 +18,10 @@ class AboutRoomViewController: UIViewController {
     var update = false
     var bcv = BottomCollectionViewCell()
     var firstSelected = Bool()
+//    var namesArray:[Rooms] = []
+    var selectedCell1 = ""
+    var imagesArray:[UIImage] = []
+    var namesArray:[String] = []
     fileprivate lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: self.layout)
         collectionView.backgroundColor = .backgroundColor
@@ -65,6 +71,7 @@ class AboutRoomViewController: UIViewController {
         setupConstraints()
     }
     //nav bar config
+    @available(iOS 10.2, *)
     func setupNavBar(){
         let titleFirst = CGRect(x: 0, y: 0, width: 100, height: 100)
         let titleSecond = CGRect(x: 0, y: 0, width: 300, height: 100)
@@ -85,7 +92,7 @@ class AboutRoomViewController: UIViewController {
         let addButton = UIButton(type: .custom)
         addButton.setImage(#imageLiteral(resourceName: "add"), for: .normal)
         addButton.frame = CGRect(x: 0.0, y: 0.0, width: 35.0, height: 35.0)
-        
+        addButton.addTarget(self, action: #selector(addDevice), for: .touchUpInside)
         let newFont = UIFont(name: Standart.myRegular.rawValue, size: 16)!
         
         
@@ -117,6 +124,12 @@ class AboutRoomViewController: UIViewController {
             collectionView.reloadData()
         }
     }
+    @available(iOS 10.2, *)
+    @objc func addDevice(){
+        let nv = AddDeviceViewController()
+        nv.currenrRoom = selectedCell1
+        navigationController?.present(nv, animated: true, completion: nil)
+    }
     func setupConstraints(){
         self.collectionView2.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height/20)
         self.collectionView.frame = CGRect(x: 0, y: self.collectionView.frame.maxY, width: self.view.frame.width, height: self.view.frame.height - self.collectionView.frame.height)
@@ -125,11 +138,9 @@ class AboutRoomViewController: UIViewController {
         scrollView.sizeToFit()
     }
 }
+@available(iOS 10.2, *)
 extension AboutRoomViewController: UICollectionViewDelegate,UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == self.collectionView{
-            return 3
-        }
         return 3
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -138,12 +149,13 @@ extension AboutRoomViewController: UICollectionViewDelegate,UICollectionViewData
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! BottomCollectionViewCell
             cell.backgroundColor = .backgroundColor
             cell.update = update
-
+            cell.roomImage.image = imagesArray[indexPath.row]
             return cell
         }else{
             let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! TopCollectionViewCell
             cell2.backgroundColor = .white
-            cell2.text.text = "Living Room"
+            cell2.text.text = namesArray[indexPath.row]
+            
             if indexPath.row == 0 {
                 cell2.text.setBottomBorder()
                 firstSelected = true
@@ -160,11 +172,14 @@ extension AboutRoomViewController: UICollectionViewDelegate,UICollectionViewData
             let selectedRow = collectionView.cellForItem(at: indexPath) as! TopCollectionViewCell
             selectedRow.text.setBottomBorder()
             self.selectedIndexPath = indexPath
-        }else{
-            print("Section 2 is tapped")
+            
+        }else if collectionView == self.collectionView{
+            let nv = DeviceControllingViewController()
+            self.present(nv, animated: true, completion: nil)
         }
     }
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+       
         let deselected = collectionView2.cellForItem(at: indexPath) as! TopCollectionViewCell
         deselected.text.setWhiteBottomBorder()
         selectedIndexPath = nil
@@ -174,6 +189,7 @@ extension AboutRoomViewController: UICollectionViewDelegate,UICollectionViewData
             firstSelected = false
             deselected.text.setWhiteBottomBorder()
         }
+        
     }
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         
@@ -183,8 +199,11 @@ extension AboutRoomViewController: UICollectionViewDelegate,UICollectionViewData
             
             let selectCell = collectionView2.cellForItem(at: indexPath) as! TopCollectionViewCell
             selectCell.text.setBottomBorder()
+            self.selectedCell1 = selectCell.text.text!
+            print("----------->\(self.selectedCell1)")
             
-            for i in 0...2{
+            
+            for i in 0...3{
                 let index = IndexPath(row: i, section: 0)
                 if (index != indexPath) {
                     let deselectCell = collectionView2.cellForItem(at: index) as? TopCollectionViewCell
@@ -196,9 +215,9 @@ extension AboutRoomViewController: UICollectionViewDelegate,UICollectionViewData
             
         }
     }
+  
 }
 extension UIView {
-    
     func setBottomBorder() {
         
         self.layer.backgroundColor = UIColor.white.cgColor
@@ -209,6 +228,7 @@ extension UIView {
         self.layer.shadowOpacity = 1.0
         self.layer.shadowRadius = 0.0
     }
+    
     func setWhiteBottomBorder() {
         self.layer.backgroundColor = UIColor.clear.cgColor
         self.layer.masksToBounds = false

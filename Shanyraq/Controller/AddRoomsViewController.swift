@@ -17,6 +17,7 @@ class AddRoomsViewController: UIViewController {
         
         return Storage.storage().reference()
     }
+    
     lazy var addPhoto: UIButton = {
         let button = UIButton()
         button.setImage(#imageLiteral(resourceName: "upload_ph"), for: .normal)
@@ -50,7 +51,7 @@ class AddRoomsViewController: UIViewController {
         setupConstraints()
     }
     func setupConstraints(){
-        self.addPhoto.frame = CGRect(x: 0, y: 16, width: self.view.frame.width - 32, height: self.view.frame.height/3)
+        self.addPhoto.frame = CGRect(x: 0, y: 80, width: self.view.frame.width - 32, height: self.view.frame.height/3)
         self.addPhoto.center.x = self.view.center.x
         self.titleRoom.frame = CGRect(x: 16, y: self.addPhoto.frame.maxY + 16, width: self.view.frame.width/2, height: 20)
         self.titleTextField.frame = CGRect(x: 16, y: self.titleRoom.frame.maxY + 16, width: self.view.frame.width - 32,height: 50)
@@ -59,28 +60,36 @@ class AddRoomsViewController: UIViewController {
     @objc func addPhotoo(){
         handleSelectGoodsImageView()
     }
-    func loadToDatabase(){
+    @objc func back(){
+        self.dismiss(animated: true, completion: nil)
+    }
+    @objc func check(){
+        if (titleTextField.text?.isEmpty)!{
+            print("Emty")
+        }else{
+            back()
+        }
         
     }
+
     //nav bar config
     func setupNavBar(){
-
-        let titleSecond = CGRect(x: 0, y: 0, width: 300, height: 100)
-        
-        let editButton = UIButton(frame: titleSecond)
+        let editButton = UIButton()
         editButton.setTitle("Add new room", for: .normal)
         editButton.titleLabel?.font = UIFont(name: Standart.myRegular.rawValue, size: 18)
         editButton.setTitleColor(.newRed, for: .normal)
         editButton.backgroundColor = .clear
+        editButton.titleLabel?.textAlignment = .right
         editButton.sizeToFit()
-        editButton.addTarget(self, action: #selector(uploadData), for: .touchUpInside)
-        let newFont = UIFont(name: Standart.myRegular.rawValue, size: 16)!
-        let seconRightSideView = UIBarButtonItem(customView: editButton)
-        seconRightSideView.setTitleTextAttributes([NSAttributedStringKey.font: newFont], for: .normal)
-        seconRightSideView.tintColor = .newRed
+        editButton.addTarget(self, action: #selector(check), for: .touchUpInside)
+        editButton.frame = CGRect(x: self.view.frame.maxX - 230, y: 40, width: 300, height: 20)
         
-        self.navigationItem.rightBarButtonItem = seconRightSideView
-
+        let backButton = UIButton()
+        backButton.setImage(#imageLiteral(resourceName: "back_arrow"), for: .normal)
+        backButton.frame = CGRect(x: 16, y: 40, width: 20, height: 16)
+        backButton.addTarget(self, action: #selector(back), for: .touchUpInside)
+        self.view.addSubview(editButton)
+        self.view.addSubview(backButton)
         
         
     }
@@ -113,32 +122,32 @@ extension AddRoomsViewController: UIImagePickerControllerDelegate, UINavigationC
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
-    @objc func uploadData(){
-            let image = addPhoto.imageView?.image
-            // свой image переводишь в дату
-            if let imageData = UIImageJPEGRepresentation(image!, 0.6) {
-                //upload imageData to storage
-                storageRef.child((Auth.auth().currentUser?.uid)!).child("\(titleTextField.text!)+\(String(describing: image))").putData(imageData, metadata: nil, completion: { (metadata, error) in
-                    if error != nil {
-                        print(error!.localizedDescription)
-                        print("Error")
-                    }
-                    // в сторэйдже она уже с url хранится
-                    if let ImageUrl = metadata?.downloadURL()?.absoluteString {
-                        
-                        DispatchQueue.main.async {
-                            
-                            if ImageUrl != "" {
-                                let userInfo = ["name": self.titleTextField.text!, "ImageURL" : ImageUrl] as [String : Any]
-                                let userRef = self.databaseRef.child("room").child((Auth.auth().currentUser?.uid)!).child(self.titleTextField.text!).childByAutoId()
-                                _ = userRef.key
-                                userRef.setValue(userInfo)
-                            }
-                        }
-                        
-                    }
-                })
-            }
-        }
+//    @objc func uploadData(){
+//            let image = addPhoto.imageView?.image
+//            // свой image переводишь в дату
+//            if let imageData = UIImageJPEGRepresentation(image!, 0.6) {
+//                //upload imageData to storage
+//                storageRef.child((Auth.auth().currentUser?.uid)!).child("\(titleTextField.text!)+\(String(describing: image))").putData(imageData, metadata: nil, completion: { (metadata, error) in
+//                    if error != nil {
+//                        print(error!.localizedDescription)
+//                        print("Error")
+//                    }
+//                    // в сторэйдже она уже с url хранится
+//                    if let ImageUrl = metadata?.downloadURL()?.absoluteString {
+//                        DispatchQueue.main.async {
+//
+//                            if ImageUrl != "" {
+//                                let userInfo = ["name": self.titleTextField.text!, "ImageURL" : ImageUrl] as [String : Any]
+//                                let userRef = self.databaseRef.child("room").child((Auth.auth().currentUser?.uid)!).child(self.titleTextField.text!)
+//                                _ = userRef.key
+//                                userRef.setValue(userInfo)
+//                            }
+//                        }
+//
+//                    }
+//                })
+//            }
+//        self.dismiss(animated: true, completion: nil)
+//        }
     
 }

@@ -15,6 +15,7 @@ class BottomCollectionViewCell: UICollectionViewCell {
     var height = [25,25,25,25,25,25]
     var namesArray = ["Lighting","Temperature","Fan","WIFI","Air Humidity","Door"]
     var statusArray = ["70%","23%","Off","On","55%","Open"]
+    var bb : Int = 0
     lazy var roomImage:UIImageView = {
         let img = UIImageView()
         img.image = #imageLiteral(resourceName: "livroom_big_img")
@@ -61,15 +62,11 @@ class BottomCollectionViewCell: UICollectionViewCell {
         collectionView.reloadData()
         //        chking()
     }
-    func chking(){
-        if isHide == false{
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
-        }else{
-            collectionView.reloadData()
-        }
+    func control(){
+        let vc = DeviceControllingViewController()
+        
     }
+
     func setupConstraints(){
         roomImage.frame = CGRect(x: 16, y: self.frame.minY + self.frame.height/7, width: self.frame.width - 32, height: self.frame.height/3)
         collectionView.frame = CGRect(x: 16, y: self.roomImage.frame.maxY + 20, width: self.frame.width - 12, height: self.frame.height/3)
@@ -96,6 +93,10 @@ extension BottomCollectionViewCell: UICollectionViewDelegate,UICollectionViewDat
         print("call me")
         print(isHide)
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.bb = indexPath.item
+        
     }
 }
 
