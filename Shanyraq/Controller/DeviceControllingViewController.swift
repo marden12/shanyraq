@@ -9,7 +9,7 @@
 import UIKit
 import VerticalSlider
 class DeviceControllingViewController: UIViewController {
-    
+     let percentTitle = UILabel()
     lazy var slider: VerticalSlider = {
         let slider = VerticalSlider()
         slider.addTarget(self, action: #selector(sliderChanged), for: .valueChanged)
@@ -20,7 +20,7 @@ class DeviceControllingViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(slider)
         view.backgroundColor = .backgroundColor
-        self.slider.frame = CGRect(x: 0, y: 64, width: 2, height: self.view.frame.height - 100)
+        self.slider.frame = CGRect(x: 0, y: 64, width: 2, height: self.view.frame.height - 200)
         self.slider.center = self.view.center
         self.slider.tintColor = .newRed
         setupNavBar()
@@ -28,7 +28,8 @@ class DeviceControllingViewController: UIViewController {
     
     @objc func sliderChanged() {
         // your code here
-        print(slider.value)
+        print(slider.value*100)
+        percentTitle.text = "\(self.slider.value*100)"
     }
     
     @objc func back(){
@@ -42,5 +43,17 @@ class DeviceControllingViewController: UIViewController {
         backButton.frame = CGRect(x: 16, y: 40, width: 20, height: 16)
         backButton.addTarget(self, action: #selector(back), for: .touchUpInside)
         self.view.addSubview(backButton)
+        
+       
+
+        
+        
+       
+        percentTitle.textAlignment = .center
+        percentTitle.textColor = .newRed
+        percentTitle.font = UIFont(name: Standart.myBold.rawValue, size: 20)
+        percentTitle.frame = CGRect(x: 0, y: 40, width: 100, height: 30)
+        percentTitle.center.x = self.view.center.x
+        self.view.addSubview(percentTitle)
     }
 }

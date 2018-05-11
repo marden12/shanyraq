@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18068DBB209D338300C647FA /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18068DBA209D338300C647FA /* AuthService.swift */; };
+		18068DBD209D33BE00C647FA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18068DBC209D33BE00C647FA /* Extensions.swift */; };
+		18068DBF209D33F500C647FA /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18068DBE209D33F500C647FA /* TextFieldView.swift */; };
+		18068DC1209D341600C647FA /* NavBarCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18068DC0209D341600C647FA /* NavBarCustomView.swift */; };
+		18068DC3209D344400C647FA /* PasswordTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18068DC2209D344400C647FA /* PasswordTextFieldView.swift */; };
+		18068DC5209D346800C647FA /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18068DC4209D346800C647FA /* ProfileHeaderView.swift */; };
+		18068DC7209D348200C647FA /* ProfileLabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18068DC6209D348200C647FA /* ProfileLabelsView.swift */; };
+		18068DC9209D34BF00C647FA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18068DC8209D34BF00C647FA /* WelcomeViewController.swift */; };
+		18068DCB209D34DD00C647FA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18068DCA209D34DD00C647FA /* SignInViewController.swift */; };
+		18068DCD209D350200C647FA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18068DCC209D350200C647FA /* SignUpViewController.swift */; };
 		1816058120977EAC00861614 /* AboutRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1816058020977EAC00861614 /* AboutRoomViewController.swift */; };
 		1816058620982F3D00861614 /* TopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1816058520982F3D00861614 /* TopCollectionViewCell.swift */; };
 		1816058820982F4800861614 /* BottomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1816058720982F4800861614 /* BottomCollectionViewCell.swift */; };
@@ -29,7 +39,6 @@
 		1862B27B2096E63D00839D14 /* ProximaNovaSoft-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1862B2772096E63C00839D14 /* ProximaNovaSoft-Medium.otf */; };
 		1862B27C2096E63D00839D14 /* ProximaNovaSoft-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1862B2782096E63C00839D14 /* ProximaNovaSoft-Regular.otf */; };
 		1862B27D2096E63D00839D14 /* ProximaNovaSoft-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1862B2792096E63D00839D14 /* ProximaNovaSoft-Semibold.otf */; };
-		1862B27E2096E68100839D14 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1862B2482096E2A400839D14 /* Info.plist */; };
 		1862B2822096E96A00839D14 /* MyHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862B2812096E96A00839D14 /* MyHomeViewController.swift */; };
 		1862B284209716D700839D14 /* RoomsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862B283209716D700839D14 /* RoomsCollectionViewCell.swift */; };
 		343BBEBAE01BEE9CF23410F1 /* Pods_ShanyraqUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52EC85A2D32D45E4497EA4A /* Pods_ShanyraqUITests.framework */; };
@@ -55,6 +64,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18068DBA209D338300C647FA /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		18068DBC209D33BE00C647FA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		18068DBE209D33F500C647FA /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		18068DC0209D341600C647FA /* NavBarCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarCustomView.swift; sourceTree = "<group>"; };
+		18068DC2209D344400C647FA /* PasswordTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextFieldView.swift; sourceTree = "<group>"; };
+		18068DC4209D346800C647FA /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		18068DC6209D348200C647FA /* ProfileLabelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLabelsView.swift; sourceTree = "<group>"; };
+		18068DC8209D34BF00C647FA /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		18068DCA209D34DD00C647FA /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		18068DCC209D350200C647FA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1816058020977EAC00861614 /* AboutRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutRoomViewController.swift; sourceTree = "<group>"; };
 		1816058520982F3D00861614 /* TopCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCollectionViewCell.swift; sourceTree = "<group>"; };
 		1816058720982F4800861614 /* BottomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -200,6 +219,11 @@
 			isa = PBXGroup;
 			children = (
 				1862B2732096E5EB00839D14 /* titleView.swift */,
+				18068DBE209D33F500C647FA /* TextFieldView.swift */,
+				18068DC0209D341600C647FA /* NavBarCustomView.swift */,
+				18068DC2209D344400C647FA /* PasswordTextFieldView.swift */,
+				18068DC4209D346800C647FA /* ProfileHeaderView.swift */,
+				18068DC6209D348200C647FA /* ProfileLabelsView.swift */,
 				1816058420982F1400861614 /* Cells */,
 			);
 			path = View;
@@ -212,6 +236,9 @@
 				1852938E2098950C00E2F4F2 /* AddRoomsViewController.swift */,
 				1816058020977EAC00861614 /* AboutRoomViewController.swift */,
 				185293902098A08F00E2F4F2 /* AddDeviceViewController.swift */,
+				18068DC8209D34BF00C647FA /* WelcomeViewController.swift */,
+				18068DCC209D350200C647FA /* SignUpViewController.swift */,
+				18068DCA209D34DD00C647FA /* SignInViewController.swift */,
 				18529394209C3C6100E2F4F2 /* DeviceControllingViewController.swift */,
 				1862B23B2096E2A400839D14 /* ProfileViewController.swift */,
 			);
@@ -223,6 +250,8 @@
 			children = (
 				1862B2752096E62C00839D14 /* myFonts */,
 				1862B26E2096E2FF00839D14 /* Color+Fonts.swift */,
+				18068DBA209D338300C647FA /* AuthService.swift */,
+				18068DBC209D33BE00C647FA /* Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -396,7 +425,6 @@
 				1862B2442096E2A400839D14 /* Assets.xcassets in Resources */,
 				1862B27B2096E63D00839D14 /* ProximaNovaSoft-Medium.otf in Resources */,
 				1862B27D2096E63D00839D14 /* ProximaNovaSoft-Semibold.otf in Resources */,
-				1862B27E2096E68100839D14 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,17 +591,27 @@
 				18529395209C3C6100E2F4F2 /* DeviceControllingViewController.swift in Sources */,
 				1862B2712096E5A700839D14 /* Model.swift in Sources */,
 				185293912098A08F00E2F4F2 /* AddDeviceViewController.swift in Sources */,
+				18068DCD209D350200C647FA /* SignUpViewController.swift in Sources */,
+				18068DC5209D346800C647FA /* ProfileHeaderView.swift in Sources */,
+				18068DC9209D34BF00C647FA /* WelcomeViewController.swift in Sources */,
 				1862B26F2096E2FF00839D14 /* Color+Fonts.swift in Sources */,
 				1852938F2098950C00E2F4F2 /* AddRoomsViewController.swift in Sources */,
 				1816058120977EAC00861614 /* AboutRoomViewController.swift in Sources */,
 				1862B2422096E2A400839D14 /* Shanyraq.xcdatamodeld in Sources */,
+				18068DBF209D33F500C647FA /* TextFieldView.swift in Sources */,
 				1862B23C2096E2A400839D14 /* ProfileViewController.swift in Sources */,
 				1862B2742096E5EB00839D14 /* titleView.swift in Sources */,
 				1862B2822096E96A00839D14 /* MyHomeViewController.swift in Sources */,
 				1862B23A2096E2A400839D14 /* AppDelegate.swift in Sources */,
 				1816058820982F4800861614 /* BottomCollectionViewCell.swift in Sources */,
+				18068DC7209D348200C647FA /* ProfileLabelsView.swift in Sources */,
 				1816058620982F3D00861614 /* TopCollectionViewCell.swift in Sources */,
+				18068DBD209D33BE00C647FA /* Extensions.swift in Sources */,
 				1862B284209716D700839D14 /* RoomsCollectionViewCell.swift in Sources */,
+				18068DCB209D34DD00C647FA /* SignInViewController.swift in Sources */,
+				18068DC3209D344400C647FA /* PasswordTextFieldView.swift in Sources */,
+				18068DC1209D341600C647FA /* NavBarCustomView.swift in Sources */,
+				18068DBB209D338300C647FA /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -735,12 +773,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CNKAME49WY;
 				INFOPLIST_FILE = Shanyraq/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-50107085.Shanygraq";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -752,12 +790,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CNKAME49WY;
 				INFOPLIST_FILE = Shanyraq/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-50107085.Shanygraq";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -12,6 +12,7 @@ import FirebaseAuth
 import FirebaseStorage
 import FirebaseDatabase
 import CoreData
+
 extension UILabel {
     func halfTextColorChange (fullText : String , changeText : String) {
         let strNumber: NSString = fullText as NSString

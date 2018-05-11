@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if ((Auth.auth().currentUser) != nil) {
             loadMainPages()
         } else {
-            print("NULLLLL")
+            loadLoginPages()
         }
         
     }
@@ -71,7 +71,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func loadLoginPages() {
-        //lofin page
+        let viewFirst = UINavigationController(rootViewController: WelcomeViewController())
+        self.window?.rootViewController = viewFirst
+        self.window?.makeKeyAndVisible()
     }
     
   

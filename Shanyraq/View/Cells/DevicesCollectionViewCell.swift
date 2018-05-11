@@ -23,7 +23,7 @@ class DevicesCollectionViewCell: UICollectionViewCell {
     }()
     lazy var deviceName: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: Standart.myRegular.rawValue, size: 14)
+        label.font = UIFont(name: Standart.myBold.rawValue, size: 14)
         return label
     }()
     lazy var deviceStatus: UILabel = {
